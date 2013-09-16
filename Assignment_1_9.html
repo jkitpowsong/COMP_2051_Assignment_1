@@ -1,0 +1,26 @@
+<html> 
+	<head>
+		<title>Assignment 1 - 9</title>
+		<!-- QUESTION 9: Create a web page that contains two buttons. When the first is clicked, the user will be prompted to enter a first name, then a last name. These names will be concatenated to form a username with a dot between the first and last names. The second button will prompt the user for a nickname.-->
+		<script type = "text/javascript">
+			function enterName()
+			{
+				fullName = prompt("Please enter your firstname.lastname");
+				alert("Your fullname is " + fullName);
+			}
+	
+			function enterNickname()
+			{
+				nickName = prompt("Please enter your nickname");
+				alert("Your nickname is " + nickName); // not working
+			}
+			
+		</script>
+	</head>
+		<body>
+			<input type = "button" onclick = "enterName()" value = "Enter fullname here">
+			<input type = "button" onclick = "enterNickname()" value = "Enter nickname here">
+			
+		</body>
+
+</html> 
