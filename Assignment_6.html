@@ -1,19 +1,52 @@
 <html> 
 	<head>
-		<title>Assignment 1 - 7</title>
-		<!-- QUESTION 7: Create a web page that will run a JavaScript script as soon as the page loads, using the onload event. The script should display the following: JavaScript rules! -->
-		<script type = "text/javascript">
-			function myFunction()
-			{
-				alert("JavaScript rules!");
-			}	
-			
-		</script>
+		<title>Assignment 1 - 6</title>
+		<!-- QUESTION 6: An employer wants you to create a program that will allow her to enter each employeeâ€™s name, hourly rate of pay, number of hours worked in one week, overtime pay rate, payroll deductions (such as medical insurance, savings, etc.), and tax rate. The program should output the employees gross pay (before taxes and deductions), and net pay (after taxes and deductions) for each employee for one week.-->
 	</head>
-		<body onload = "myFunction()">
+		<body>
+			<script type = "text/javascript">
+			var employeeName 		= prompt("Enter employee name");
+			var hourlyRate 			= prompt("Enter hourly rate");
+			var numHours 			= prompt("Enter number of hours in 1 week");
+			var overtimePayrate 		= prompt("Enter overtime pay rate");
+			var overtimeHrs			= prompt("Enter overtime hours")
+			var payrollDeductions 		= prompt("Enter payroll deductions");
+			var taxRate 			= prompt("Enter tax rate (Type decimal number, example 0.05)");
+
+ 			var grossPay 			= ((parseFloat(hourlyRate) * parseFloat(numHours))) + (parseFloat(overtimeHrs)*(parseFloat(overtimePayrate)));
+
+ 			var netPay 				= parseFloat(grossPay) - (((parseFloat(grossPay) * parseFloat(taxRate)) + parseFloat(payrollDeductions)));
+
+ 			document.write(employeeName + "'s" + " Gross Pay " + "is " + grossPay + "<br>");
+ 			
+ 			document.write(employeeName + "'s" + " Net Pay " + "is " + netPay + "<br>" + "<hr>");
+
+ 			// Add more employees
+
+ 			var nextEmployee = prompt("Add more employee (yes or no)?");
+
+            if (nextEmployee == "yes")
+            {
+                var employeeName 		= prompt("Enter employee name");
+                var hourlyRate 			= prompt("Enter hourly rate");
+				var numHours 			= prompt("Enter number of hours in 1 week");
+				var overtimePayrate 		= prompt("Enter overtime pay rate");
+				var overtimeHrs			= prompt("Enter overtime hours")
+				var payrollDeductions 		= prompt("Enter payroll deductions");
+				var taxRate 			= prompt("Enter tax rate (Type decimal number, example 0.05)");
+				
+				var grossPay 			= ((parseFloat(hourlyRate) * parseFloat(numHours))) + (parseFloat(overtimeHrs)*(parseFloat(overtimePayrate)));
+
+ 				var netPay 			= parseFloat(grossPay) - (((parseFloat(grossPay) * parseFloat(taxRate)) + parseFloat(payrollDeductions)));
+
+ 				document.write(employeeName + "'s" + " Gross Pay " + "is " + grossPay + "<br>");
+ 			
+ 				document.write(employeeName + "'s" + " Net Pay " + "is " + netPay + "<br>" + "<hr>");
+ 
+            }
+
+
+			</script>
 		</body>
 
 </html> 
-
-
-
