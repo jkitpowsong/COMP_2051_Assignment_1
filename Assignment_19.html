@@ -1,0 +1,39 @@
+	<head>
+		<title>Assigment 1 - 19</title>
+		<!-- QUESTION 19 :
+        	Write a program that calculates whether a customer has exceeded the credit limit of an account. To do this:
+			a. Obtain account number, balance previous, total charges, total payments/credits, and credit limit.
+			b. Calculate current debt balance
+			c. Compare that the debt is < credit limit, if so print leftover credit, if not print credit exceeded
+		-->
+			<script type="text/javascript">
+			// Part A
+			var accountNumber 		= prompt("Enter your account number");
+			var previousBalance		= parseFloat(prompt("What is your previous balance?"));
+			var totalCharges		= parseFloat(prompt("What is your total charges?"));
+			var totalPayments		= parseFloat(prompt("What is your total payments/ credits?"));
+			var creditLimit			= parseFloat(prompt("What is your credit limit?"));
+		
+			// Part B
+			var currentDebt			= parseInt(previousBalance)	+ parseInt(totalCharges) - parseInt(totalPayments);
+			var currentCredits		= parseInt(creditLimit) - parseInt(currentDebt);
+			
+			// Part C
+			if (currentDebt < creditLimit)
+			{
+				document.write("Your current credit is " + currentCredits);
+			}
+			
+			else if (currentDebt > creditLimit)
+			{
+				document.write("Sorry, your credit is exceeded!");
+			}
+		
+			
+			
+			</script>
+	</head>
+	
+	<body>
+	</body>
+</html>
