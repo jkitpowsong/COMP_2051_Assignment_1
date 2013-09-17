@@ -1,0 +1,38 @@
+<html>
+    <head>
+		<title>Assigment 1 - 18</title>
+		<!-- QUESTION 18 :
+        	Write a program that calculates an average of miles per gallon for a vehicle over the history of miles/gallons factor. The steps are the following:
+			a. Input number of full tanks to average.
+			b. Input the gallons of fuel filled for number x
+			c. Input the miles driven for number x
+			d. Repeat entry of gallons and miles until the number of tanks is entered.
+			e. Print the average miles per gallon for each tankful and print an average at the bottom.
+		-->
+			<script type="text/javascript">
+			//Part A
+				var millageA = prompt("Enter current millage (first fill up)");
+				var millageB = prompt("Enter millage on the second fill up");
+				var gallons  = prompt("Enter second fill up");
+
+				while (!millageA.length)
+				{
+               		millageA = prompt("Enter current millage (first fill up)"); 
+				}
+
+				var Mpg 	 = (parseFloat(millageB) - parseFloat(millageA)) / parseFloat(gallons);
+
+				
+				document.write("Current millage: " + millageA + "<br>");
+				document.write("Millage on second fill up: " + millageB + "<br>");
+				document.write("Second fill up (gallons): " + gallons + "<br>");
+
+				document.write("The average miles per gallons of this vehicle is " + Mpg);
+
+		
+			</script>
+	</head>
+	
+	<body>
+	</body>
+</html>
