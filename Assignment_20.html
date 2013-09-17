@@ -1,0 +1,37 @@
+	<head>
+		<title>Assigment 1 - 20</title>
+		<!-- QUESTION 20 : Write a program that computes the commission and total payment of sales of an employee. This program will:
+			a. Ask for sale item amount.
+			b. Repeat until data is done being entered.
+			c. Calculate the percentage of commission based on total sales.
+			d. Add base pay.
+			e. Print items and total amount.
+		-->
+			<script type="text/javascript">
+			//Part A
+			var saleItem = prompt("Enter sale item amount");
+			
+			//Part B
+			while (!saleItem.length)
+			{
+               saleItem = prompt("Enter sale item amount"); 
+			}
+			
+			//Part C
+			var commissionRate = 0.05;
+			var commission = parseFloat(saleItem) * parseFloat(commissionRate);
+
+			//Part D
+	        var basePay = 1000.0;
+	        var totalAmt = basePay + parseFloat(commission);		
+			
+			//Part E
+            document.write("Items amount is: " + saleItem + "<br>");
+            document.write("Total amount is: " + totalAmt);
+			
+			</script>
+	</head>
+	
+	<body>
+	</body>
+</html>
